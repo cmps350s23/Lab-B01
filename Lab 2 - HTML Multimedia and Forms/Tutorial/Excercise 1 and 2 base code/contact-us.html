@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<h1>Contact Us</h1>
-<a href="index.html">Home</a>
+    <h1>Contact Us</h1>
+    <a href="index.html">Home</a>
+
+
+    <form action="#">
+        <fieldset>
+            <legend>Fill this form</legend>
+
+            <div class="form-group">
+                <label for="fullName"><b>Full Name</b></label>
+                <input type="text" name="fullName" id="fullName" placeholder="enter your name">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email"><b>Email</b></label>
+                <input type="email" name="email" id="email" placeholder="x@x.com">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="rating"><b>How do you rate our website?</b></label>
+                <select name="rating" id="rating">
+                    <option value="Excellent">Excellent</option>
+                    <option value="Very Good">Very Good</option>
+                    <option value="Good">Good</option>
+                    <option value="Poor">Poor</option>
+                </select>
+            </div>
+
+
+
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </fieldset>
+    </form>
 
 </body>
+
 </html>
