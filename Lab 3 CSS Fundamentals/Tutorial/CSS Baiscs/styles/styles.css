@@ -9,7 +9,7 @@ div.images {
   display: flex;
   /* flex-wrap: wrap;
   flex-direction: row; */
-  /* height: 400px; */
+  height: 400px;
   gap: 1rem;
   justify-content: space-between;
 }
@@ -21,8 +21,19 @@ div.images {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 40%;
+  height: 40px;
 }
 
 .mi {
   background-color: brown;
+}
+
+.logo {
+  align-self: flex-end;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-color: red;
+  }
 }
