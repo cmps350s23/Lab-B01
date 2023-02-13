@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+    /* background-color: black; */
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: beige;
+}
+
+nav li {
+    list-style: none;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+nav li {
+    color: brown;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: black;
+}
+
+li a {
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+section,
+aside {
+    margin-top: 1rem;
+    /* border: black solid 2px; */
+}
+
+aside li {
+    list-style: none;
+}
+
+figure img {
+    width: 90%;
+    margin: 10px;
+}
+
+#campus-involvement li {
+    margin-left: 5%;
+}
+
+#content {
+    display: flex;
+}
+
+aside {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+aside:first-of-type hr {
+    margin-top: 0.5rem;
+}
+
+aside li {
+    padding: 0.5rem;
+    text-align: justify;
+    list-style: none;
+}
+
+aside a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+main {
+    flex-basis: 80%;
+}
+
+section h2 {
+    background-color: bisque;
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    text-align: justify;
+    margin-right: 1rem;
+}
