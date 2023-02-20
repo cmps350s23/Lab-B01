@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+}
+
+.container div {
+  background-color: bisque;
+}
