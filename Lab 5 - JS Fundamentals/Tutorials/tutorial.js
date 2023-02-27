@@ -103,7 +103,7 @@ calculator(2, 3, add, display);
 calculator(2, 3, sub, display);
 calculator(2, 3, mul, display);
 calculator(2, 3, div, display);
-*/
+
 
 const numbers = [1, 2, 3, 4, 5, 6];
 
@@ -115,13 +115,60 @@ filtered = numbers.filter(function (value) {
   return value % 2 == 0;
 });
 
+
+const numbers = [1, 2, 3, 4, -5, 6, 4];
 filtered = numbers.filter((value) => value % 2 == 0);
+neg = numbers.filter((value) => value < 0);
+squared = numbers.map((value) => value ** 2);
+findElement = numbers.find((value) => value == 999);
+findIndex = numbers.findIndex((value) => value == 4);
+numbers.forEach((i) => console.log(i));
+console.log(numbers);
+console.log("Filter Even", filtered);
+console.log("Filter Negative", neg);
+numbers.map((a) => a ** 3).filter((a) => a % 2 == 1);
+console.log("MAP", squared);
+console.log("Find", findElement);
+console.log("FindIndex", findIndex);
 
-// Arrow functions
-function square(a) {
-  return a ** 2;
-}
+console.log(numbers);
+numbers.splice(
+  numbers.findIndex((value) => value == 4),
+  1
+);
+*/
 
-square2 = (a) => a ** 2;
+// const numbers = [1, 2, 3, 4, -5, 6, 4];
 
-console.log(square2(100));
+// console.log(numbers);
+
+// const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+// const mult = numbers.reduce((acc, curr) => acc * curr, 1);
+
+// function reducer(acc, curr) {
+//   return [...acc , curr];
+// }
+// numbers = [1,2,3,4,5]
+
+// function myReduce(numbers, reducer, init) {
+//   let acc = init;
+
+//   for (const curr in numbers) {
+//     acc = reducer(acc, curr);
+//   }
+
+//   return acc;
+// }
+
+// add1 = myReduce([1, 2, 3, 4], (a, b) => a + b, 0);
+// mul1 = myReduce([1, 2, 3, 4], (a, b) => a * b, 1);
+// post = myReduce([1, 2, -3, 4], (a, b) => a.push(b), []);
+
+// console.log();
+
+const numbers = [1, 2, 3, 4, -5, 6, 4];
+
+const num = numbers.reduce((a, b) => a + b, 0);
+const num2 = numbers.reduce((a, b) => a * b, 1);
+
+console.log(num, num2);
