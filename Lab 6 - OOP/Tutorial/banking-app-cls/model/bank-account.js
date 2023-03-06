@@ -5,6 +5,7 @@ export class BankAccount {
     }
 
     getBalance() { return this._balance; }
+    setBalance(balance) { this._balance = balance; }
     getAccount() { return this._accountNo; }
 
     withdraw(amount) {
