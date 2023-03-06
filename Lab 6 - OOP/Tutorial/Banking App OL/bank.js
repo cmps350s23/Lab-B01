@@ -7,13 +7,34 @@ const accounts = [
 
 export function deposit(accountNo, amount) {
     //index location 
-    // const index = accounts.findIndex(account => account.accountNo === accountNo)
-    // if (index >= 0)
-    //     accounts[index].balance += amount
+    const index = accounts.findIndex(account => account.accountNo === accountNo)
+    if (index >= 0)
+        accounts[index].balance += amount
+}
 
-    const account = accounts.find(account => account.accountNo === accountNo)
-    if (account)
-        account.balance += amount
+export function withdraw(accountNo, amount) {
+    const account = getAccount(accountNo)
+    if (account) account.balance -= amount
+}
+
+export function getAccount(accountNo) {
+    return accounts.find(account => account.accountNo === accountNo)
+}
+
+export function deleteAccount(accountNo) {
+    const index = accounts.findIndex(account => account.accountNo === accountNo)
+    if (index >= 0) accounts.splice(index, 1)
+}
+
+export function sumBalance() {
+    return accounts.reduce((acc, curr) => acc + curr.balance, 0)
+}
+export function averageBalance() {
+    return sumBalance() / accounts.length
+}
+
+export function addAccount(account) {
+    accounts.push(account)
 }
 
 export function display() {
