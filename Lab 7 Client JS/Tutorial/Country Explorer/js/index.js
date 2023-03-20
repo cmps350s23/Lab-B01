@@ -14,6 +14,7 @@ async function handleRegionChange() {
     countryDD.innerHTML = countries
         .map(country => `<option value="${country.name.common}">${country.name.common}</option>`)
         .join(' ')
+    handleCountryChange()
 }
 
 async function handleCountryChange() {
@@ -26,8 +27,35 @@ async function handleCountryChange() {
 }
 
 function changeCountryToFacts(country) {
+    const currKey = Object.keys(country.currencies)[0]
+    const languageKeys = Object.keys(country.languages)
+    const languages = languageKeys.map(key => country.languages[key]).join(' ')
+
     return `
         <h2> Facts About ${country.name.common}</h2>
-        <img src="" alt="">
-    `
+        <img src="${country.flags.png}" alt="${country.flags.alt}">
+        <br>
+        <table>
+            <tr>
+                <th>Official Country name</th>
+                <td>${country.name.official}</td>
+            </tr>
+            <tr>
+                <th>Capital City</th>
+                <td>${country.capital[0]}</td >
+            </tr >
+            <tr>
+                <th>Currency</th>
+                <td>${country.currencies[currKey].name}</td>
+            </tr>
+            <tr>
+                <th>Population</th>
+                <td>${country.population}</td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <td>${languages}</td>
+            </tr>
+        </table >
+        `
 }
