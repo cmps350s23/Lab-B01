@@ -11,6 +11,8 @@ async function handleRegionChange() {
     const data = await fetch(url)
     const countries = await data.json()
 
+    countries.sort((a, b) => a.name.common.localeCompare(b.name.common))
+
     countryDD.innerHTML = countries
         .map(country => `<option value="${country.name.common}">${country.name.common}</option>`)
         .join(' ')
@@ -27,6 +29,7 @@ async function handleCountryChange() {
 }
 
 function changeCountryToFacts(country) {
+
     const currKey = Object.keys(country.currencies)[0]
     const languageKeys = Object.keys(country.languages)
     const languages = languageKeys.map(key => country.languages[key]).join(' ')
@@ -59,3 +62,4 @@ function changeCountryToFacts(country) {
         </table >
         `
 }
+
