@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid'
 const filePath = 'app/data/accounts.json' // relative to the root of the project
 
 export default class AccountsRepo {
-    async getAccounts(type: string) {
+    async getAccounts(type) {
         const accounts = await fs.readJson(filePath)
         if (type)
             return accounts.filter(acc => acc.acctType.toLowerCase().includes(type.toLowerCase()))
@@ -43,4 +43,18 @@ export default class AccountsRepo {
         const filteredAccounts = accounts.filter(acc => acc.accountNo != accNo)
         return await fs.writeJson(filePath, filteredAccounts)
     }
+    async addTransaction(transaction) {
+        //account
+        const accounts = await fs.readJson(filePath)
+        const index = accounts.findIndex(account => account.accountNo == account.accountNo)
+        if (index > 0) {
+            if (transaction.transType == "Withdraw")
+                accounts[index].balance -= transaction.amount
+            else
+                accounts[index].balance += transaction.amount
+        }
+
+        return await fs.writeJson(filePath, accounts)
+    }
+
 }

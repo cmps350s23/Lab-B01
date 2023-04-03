@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <nav class="navMenu">
+        <img src="img/logo.png" alt="" class="logo">
+        <h2 class="title">CMPS-312 Book Store</h2>
+    </nav>
+    <hr>
+    <br>
+    <div id="main-content">
+
+        <input type="search" placeholder="search book by title" id="search" oninput="searchBook(this.value)">
+        <select name="sort-by" id="" class="sort">
+            <option value="all" disabled selected>Sort By</option>
+            <option value="Genre">Genre</option>
+            <option value="Price">Price</option>
+            <option value="Author">Author</option>
+        </select>
+
+        <br>
+        <div class="card-list">
+            <!-- remove this code it is a sample -->
+            <div class="card" id="book-${book.id}">
+                <div class="card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/220px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg"
+                        alt="London trip">
+                </div>
+
+                <div class="card-body">
+                    <span class="price">Price : 1000 QAR</span>
+                    <hr class="dark-line">
+                    <h2>TITLE</h2>
+                    <h3>AUTHOR</h3>
+                    <h4>GENRE</h4>
+                </div>
+                <button class="btn-primary">Update </button>
+            </div>
+            <div class="card" id="book-${book.id}">
+                <div class="card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/220px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg"
+                        alt="London trip">
+                </div>
+
+                <div class="card-body">
+                    <span class="price">Price : 1000 QAR</span>
+                    <hr class="dark-line">
+                    <h2>TITLE</h2>
+                    <h3>AUTHOR</h3>
+                    <h4>GENRE</h4>
+                </div>
+                <button class="btn-primary">Update </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

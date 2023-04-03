@@ -1,4 +1,4 @@
-import AccountsRepo from './accounts-repo.js'
+import AccountsRepo from '../../data/accounts-repo.js'
 const repo = new AccountsRepo()
 
 
@@ -15,9 +15,7 @@ export async function GET(request) {
 }
 export async function POST(request) {
     const account = await request.json()
-
     const addedAccount = await repo.addAccount(account)
-
     return Response.json(addedAccount)
 }
 export async function PUT(request) {

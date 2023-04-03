@@ -1,0 +1,66 @@
+[
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg/220px-The_Great_Gatsby_Cover_1925_Retouched.jpg",
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "genre": "Classic",
+        "price": 9.99,
+        "ISBN": "978-0743273565"
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/220px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "genre": "Classic",
+        "price": 7.99,
+        "ISBN": "978-0446310789"
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg/220px-The_Catcher_in_the_Rye_%281951%2C_first_edition_cover%29.jpg",
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "genre": "Classic",
+        "price": 11.99,
+        "ISBN": "978-0316769174"
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/Cien_años_de_soledad_%28book_cover%2C_1967%29.jpg/220px-Cien_años_de_soledad_%28book_cover%2C_1967%29.jpg",
+        "title": "One Hundred Years of Solitude",
+        "author": "Gabriel García Márquez",
+        "genre": "Fantasy",
+        "price": 10.99,
+        "ISBN": "978-0060883287"
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c4/TheAlchemist.jpg",
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "genre": "Fiction",
+        "price": 8.99,
+        "ISBN": "978-0062315007"
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Ḳitsur_toldot_ha-enoshut.jpg/220px-Ḳitsur_toldot_ha-enoshut.jpg",
+        "title": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "genre": "History",
+        "price": 14.99,
+        "ISBN": "978-0062316110"
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/39/The_Hunger_Games_cover.jpg/220px-The_Hunger_Games_cover.jpg",
+        "title": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "genre": "Young Adult",
+        "price": 6.99,
+        "ISBN": "978-0439023481"
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/First_Single_Volume_Edition_of_The_Lord_of_the_Rings.gif/220px-First_Single_Volume_Edition_of_The_Lord_of_the_Rings.gif",
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "genre": "Fantasy",
+        "price": 16.99,
+        "ISBN": "978-0544003415"
+    }
+]
