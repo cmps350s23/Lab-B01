@@ -12,13 +12,16 @@ class AccountRepo {
         const response = await fetch(`${baseUrl}/${accountNo}`, {
             method: 'DELETE'
         })
-
-
         return await response.json()
     }
 
     async addAccount(account) {
+        const response = await fetch(`${baseUrl}`, {
+            method: 'POST',
+            body: JSON.stringify(account),
+            headers: { 'Content-type': 'application/json' }
 
+        })
     }
 
     async updateAccount(account) {
