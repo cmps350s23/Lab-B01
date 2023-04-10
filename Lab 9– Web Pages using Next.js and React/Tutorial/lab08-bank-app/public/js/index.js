@@ -14,11 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function handleLoadAccounts(acctType) {
     try {
-        // const accounts = await accountRepo.getAccounts(acctType)
-        //http://localhost:3000/api/accounts //gets all the accounts
-        const data = await fetch('http://localhost:3000/api/accounts')
-        const accounts = await data.json()
-
+        const accounts = await accountRepo.getAccounts(acctType)
         document.querySelector('#accounts-table').innerHTML =
             `<table id="accounts">
                 <tr>
