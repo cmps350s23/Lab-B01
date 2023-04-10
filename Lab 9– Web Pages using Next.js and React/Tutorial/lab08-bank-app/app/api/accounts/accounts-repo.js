@@ -1,9 +1,10 @@
 // npm i fs-extra
+import exp from 'constants'
 import fs from 'fs-extra'
 import { nanoid } from 'nanoid'
 import path from 'path'
 
-export default class AccountsRepo {
+class AccountsRepo {
     constructor() {
         this.filePath = path.join(process.cwd(), 'app/data/accounts.json')
     }
@@ -72,3 +73,5 @@ export default class AccountsRepo {
         }
     }
 }
+
+export default new AccountsRepo()
