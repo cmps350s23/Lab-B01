@@ -19,6 +19,7 @@ export default class AccountsRepo {
     async addAccount(account) {
         account.accountNo = nanoid().slice(0, 4)
         const accounts = await this.getAccounts()
+        account.balance = parseInt(account.balance)
         accounts.push(account)
         await fs.writeJSON(this.filePath, accounts)
         return account
@@ -52,6 +53,7 @@ export default class AccountsRepo {
     }
     async addTransaction(transaction) {
         console.log(transaction);
+
         transaction.accountNo = parseInt(transaction.accountNo.toString());
         transaction.amount = parseInt(transaction.amount.toString());
         try {

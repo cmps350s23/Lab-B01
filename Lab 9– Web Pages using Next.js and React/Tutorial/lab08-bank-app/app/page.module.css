@@ -78,6 +78,12 @@
     justify-self: center;
   }
 
+  .nav {
+    background-color: antiquewhite;
+    padding: 1rem;
+  }
+
+
   .nav div {
     flex-direction: row;
   }
