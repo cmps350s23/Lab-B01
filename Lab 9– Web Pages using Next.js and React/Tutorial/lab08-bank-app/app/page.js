@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 import accountRepo from './api/accounts/accounts-repo'
+import AccountsList from './accounts/AccountsList'
 
 export default async function Home() {
   // get the data from the repo
@@ -8,7 +9,7 @@ export default async function Home() {
 
   return (
     <div>
-      {accounts.map(account => <p> {account.accountNo} </p>)}
+      <AccountsList initialAccounts={accounts} />
     </div>
   )
 }
