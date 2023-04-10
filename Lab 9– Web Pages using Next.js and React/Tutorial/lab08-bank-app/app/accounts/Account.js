@@ -6,8 +6,7 @@ export default function Account({ account }) {
             <td>{account.accountNo}</td>
             <td>{account.acctType}</td>
             <td>{account.balance}</td>
-            <td>{account.balance <= 0 ? <button><i class="fas fa-trash"></i></button> : ''}
-            </td>
+            <td>{account.balance <= 0 ? <button><i className="fas fa-trash"></i></button> : ''}</td>
         </tr>
     )
 }

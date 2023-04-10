@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../page.module.css'
+import Account from './Account'
 export default function Accounts({ initialAccounts }) {
     return (
         <main id="main" className={styles.main}>
@@ -10,7 +11,7 @@ export default function Accounts({ initialAccounts }) {
                 <option value="Current">Current</option>
             </select>
             {/* the accounts list */}
-            <table id="accounts">
+            <table id="accounts" className={styles.table}>
                 <tr>
                     <th>Account No</th>
                     <th>Account Type</th>
@@ -19,7 +20,6 @@ export default function Accounts({ initialAccounts }) {
                 </tr>
                 {initialAccounts.map(account => <Account account={account}></Account>)}
             </table>
-
         </main>
     )
 }
