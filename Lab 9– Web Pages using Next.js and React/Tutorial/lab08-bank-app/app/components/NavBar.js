@@ -8,8 +8,8 @@ export default function NavBar() {
             <ul>
                 <li>Alpha Bank</li>
                 <li><Link href="/">Home</Link></li>
-                <li><Link href="/accounts">Add Account</Link></li>
-                <li><Link href="#">Add Transaction</Link></li>
+                <li><Link href="/accounts/add">Add Account</Link></li>
+                <li><Link href="/accounts/trans">Add Transaction</Link></li>
             </ul>
         </nav>
     )
