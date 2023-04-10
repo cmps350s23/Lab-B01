@@ -8,8 +8,6 @@ export default async function Home() {
   const accounts = await accountRepo.getAccounts()
 
   return (
-    <div>
-      <AccountsList initialAccounts={accounts} />
-    </div>
+    <AccountsList initialAccounts={accounts} />
   )
 }

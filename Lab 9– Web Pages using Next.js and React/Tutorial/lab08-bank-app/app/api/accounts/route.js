@@ -1,5 +1,4 @@
-import AccountsRepo from "./accounts-repo"
-const repo = new AccountsRepo()
+import repo from "./accounts-repo"
 
 export async function GET(request) {
     const { searchParams } = new URL(request.url)
