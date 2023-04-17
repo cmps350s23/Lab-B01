@@ -13,6 +13,14 @@ export default function AccountsTable({ initialAccounts }) {
         setAccounts(filterAccounts)
     }
 
+    async function handleDelete(accountNo) {
+        if (confirm('Are you sure you want to delete this account?') === false) return
+
+        const response = await fetch(`/api/accounts/${accountNo}`, {
+            method: 'DELETE'
+        })
+        await handleTypeChange('All')
+    }
     return (
         <div>
             <label htmlFor="acctType"> Account Type</label>
@@ -31,7 +39,13 @@ export default function AccountsTable({ initialAccounts }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {accounts.map(account => <Account account={account}> </Account>)}
+                    {accounts.map(account =>
+                        <Account
+                            account={account}
+                            onDelete={handleDelete}
+                            key={account.accountNo}>
+                        </Account>
+                    )}
                 </tbody>
             </table>
 
