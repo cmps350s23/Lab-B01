@@ -24,13 +24,17 @@ export default function Accounts({ initialAccounts }) {
             </select>
             {/* the accounts list */}
             <table id="accounts" className={styles.table}>
-                <tr>
-                    <th>Account No</th>
-                    <th>Account Type</th>
-                    <th>Balance</th>
-                    <th>Action</th>
-                </tr>
-                {accounts.map(account => <Account account={account}></Account>)}
+                <thead>
+                    <tr>
+                        <th>Account No</th>
+                        <th>Account Type</th>
+                        <th>Balance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {accounts.map(account => <Account account={account}></Account>)}
+                </tbody>
             </table>
         </main>
     )
