@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function Account({ account, onDelete }) {
 
@@ -9,7 +10,12 @@ export default function Account({ account, onDelete }) {
             <td>{account.balance}</td>
             <td>
                 {account.balance >= 0 ? <button onClick={e => onDelete(account.accountNo)}> <i className="fas fa-trash"></i>Delete</button> : ''}
-                <button > <i className="fas fa-edit"></i> Edit </button>
+                <Link href={
+                    {
+                        pathname: '/accounts/edit',
+                        query: account
+                    }
+                }> <i className="fas fa-edit"></i> Edit </Link>
             </td>
         </tr>
     )
