@@ -1,0 +1,63 @@
+[
+    {
+        "accountNo": "4444",
+        "acctType": "Saving",
+        "balance": 2500,
+        "minimumBalance": 1000,
+        "owner": {
+            "firstName": "Aisha",
+            "lastName": "Ahmed",
+            "country": "Qatar",
+            "city": "Wakra",
+            "address": "123 Main Street"
+        }
+    },
+    {
+        "acctType": "Saving",
+        "balance": 123312,
+        "accountNo": "xvCx",
+        "owner": {
+            "firstName": "Salman",
+            "lastName": "Ali",
+            "country": "Qatar",
+            "city": "Alkhoor",
+            "address": "456 Park Avenue"
+        }
+    },
+    {
+        "acctType": "Current",
+        "balance": 123,
+        "accountNo": "9mVA",
+        "owner": {
+            "firstName": "Fatima",
+            "lastName": "Khan",
+            "country": "Qatar",
+            "city": "Doha",
+            "address": "789 Elm Street"
+        }
+    },
+    {
+        "acctType": "Current",
+        "balance": 1000,
+        "accountNo": "IL10",
+        "owner": {
+            "firstName": "Yusuf",
+            "lastName": "Hussain",
+            "country": "Qatar",
+            "city": "Wakra",
+            "address": "234 Oak Drive"
+        }
+    },
+    {
+        "acctType": "Saving",
+        "balance": 123,
+        "accountNo": "upvP",
+        "owner": {
+            "firstName": "Laila",
+            "lastName": "Shah",
+            "country": "Qatar",
+            "city": "Alkhoor",
+            "address": "567 Maple Avenue"
+        }
+    }
+]
