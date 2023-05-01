@@ -70,19 +70,21 @@ export default class AccountsRepo {
     async addTransaction(transaction, accountNo) {
 
         try {
-            const account = this.getAccount(accountNo)
+            const account = await this.getAccount(accountNo)
+            transaction.amount = parseFloat(transaction.amount)
 
             if (account) {
                 if (transaction.transType == 'Deposit')
-                    account.balance += parseFloat(transaction.amount);
+                    account.balance += transaction.amount;
                 else
-                    account.balance -= parseFloat(transaction.amount);
+                    account.balance -= transaction.amount;
 
                 await this.updateAccount(account, accountNo)
                 return await prisma.transaction.create({ data: transaction })
             }
 
         } catch (err) {
+            console.log(err);
             return {
                 issue: 'unable to execute the transaction successful',
                 reason: err.message
