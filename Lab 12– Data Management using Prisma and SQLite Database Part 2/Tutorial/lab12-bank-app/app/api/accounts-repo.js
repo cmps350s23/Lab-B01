@@ -141,7 +141,6 @@ export default class AccountsRepo {
     async getOwners() {
         try {
             return await prisma.owner.findMany()
-
         } catch (error) {
             console.log(error);
             return { error: error.message }
@@ -299,4 +298,3 @@ export default class AccountsRepo {
         }
     }
 }
-
