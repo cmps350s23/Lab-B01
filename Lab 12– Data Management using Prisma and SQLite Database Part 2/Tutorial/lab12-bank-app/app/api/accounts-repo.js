@@ -18,8 +18,11 @@ export default class AccountsRepo {
             // await this.getAvgBalance()
             // this.deleteOwner("dfghfrjki756gh")
             // const owners = await this.searchOwner('J D')
-            this.getTrans('rsfrg2fprksfrg2fpt', '2021-05-16T10:00:00.000Z', '2021-11-17T10:00:00.000Z')
-
+            // this.getTrans('rsfrg2fprksfrg2fpt', '2021-05-16T10:00:00.000Z', '2021-11-17T10:00:00.000Z')
+            // await this.getMinMaxBalance()
+            // await this.getTransSum('rsfrg2fprksfrg2fpt', '2021-05-16T10:00:00.000Z', '2021-11-17T10:00:00.000Z')
+            // await this.getTop3Accounts()
+            await this.getOwnerReport('ckockkdifg2fpt')
 
             let accounts = []
             if (type == 'Savings' || type == 'Current') {
@@ -200,9 +203,10 @@ export default class AccountsRepo {
                         lte: 1000,
                     }
 
-                }
+                },
+                include: { Account: { include: { Owner: true } } }
             })
-            console.log('Account with account No ', accountNo, 'transactions are ', transactions);
+            console.log('Account with account No ', accountNo, 'transactions are ', JSON.stringify(transactions, null, 2));
             return transactions
 
         } catch (error) {
@@ -211,20 +215,38 @@ export default class AccountsRepo {
         }
 
     }
-
-
-
-    async getOwnerReport(ownerId) {
+    async getMinMaxBalance() {
         try {
+            const minMaxBalance = await prisma.account.aggregate({
+                _min: { balance: true },
+                _max: { balance: true },
+                _count: { accountNo: true },
+                _sum: { balance: true },
+                _avg: { balance: true }
+            })
 
+            console.log(minMaxBalance);
+            return minMaxBalance
         } catch (error) {
             console.log(error);
             return { error: error.message }
         }
     }
+
     async getTransSum(accountNo, fromDate, toDate) {
         try {
-
+            const transactionSums = await prisma.transaction.groupBy({
+                by: ['transType'],
+                where: {
+                    accountNo,
+                    date: {
+                        gte: new Date(fromDate).toISOString(),
+                        lte: new Date(toDate).toISOString(),
+                    }
+                },
+                _sum: { amount: true }
+            })
+            console.log(transactionSums);
         } catch (error) {
             console.log(error);
             return { error: error.message }
@@ -245,19 +267,32 @@ export default class AccountsRepo {
             return { error: error.message }
         }
     }
-
-    async getMinMaxBalance() {
+    async getTop3Accounts() {
         try {
-
+            const top3 = await prisma.account.findMany({
+                orderBy: { balance: 'desc' },
+                take: 3
+            })
+            console.log(top3);
         } catch (error) {
             console.log(error);
             return { error: error.message }
         }
     }
 
-    async getTop3Accounts() {
+    async getOwnerReport(ownerId) {
         try {
-
+            const owner = await prisma.owner.findUnique({
+                where: { id: ownerId },
+                include: {
+                    accounts: {
+                        include: {
+                            transactions: true
+                        }
+                    }
+                }
+            })
+            console.log(JSON.stringify(owner, null, 2));
         } catch (error) {
             console.log(error);
             return { error: error.message }
