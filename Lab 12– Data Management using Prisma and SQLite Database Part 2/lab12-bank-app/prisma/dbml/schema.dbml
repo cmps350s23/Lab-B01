@@ -28,6 +28,6 @@ Table Transaction {
   accountNo String [not null]
 }
 
-Ref: Account.ownerId > Owner.id [delete: Cascade]
+Ref: Account.ownerId > Owner.id
 
 Ref: Transaction.accountNo > Account.accountNo [delete: Cascade]

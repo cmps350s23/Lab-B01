@@ -31,7 +31,6 @@ export default function Edit() {
     }
     return (
         <>
-            {JSON.stringify(report)}
 
             <h3 className={styles.title}>Account Report Information</h3>
             <hr></hr>

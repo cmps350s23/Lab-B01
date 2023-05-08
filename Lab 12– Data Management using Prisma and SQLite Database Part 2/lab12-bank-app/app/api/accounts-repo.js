@@ -7,44 +7,14 @@ import { AccountType } from '@prisma/client'
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-const ownersPath = path.join(process.cwd(), 'app/data/owners.json')
-const accountsPath = path.join(process.cwd(), 'app/data/accounts.json')
-const transPath = path.join(process.cwd(), 'app/data/trans.json')
-
 export default class AccountsRepo {
     constructor() {
 
     }
 
-    async initDB() {
-        try {
-            const owners = await fs.readJSON(ownersPath)
-            const accounts = await fs.readJSON(accountsPath)
-            const transactions = await fs.readJSON(transPath)
-
-            // console.log(owners);
-            // console.log(accounts);
-            // console.log(transactions);
-
-            // // createMany is not supported for SQLite. Use create instead
-            for (const owner of owners) await prisma.owner.create({ data: owner })
-            for (const account of accounts) await prisma.account.create({ data: account })
-            for (const transaction of transactions) await prisma.transaction.create({ data: transaction })
-
-
-        } catch (error) {
-            console.log(error);
-            return { error: error.message }
-        }
-    }
-
     async getAccounts(type) {
         try {
-            if (await prisma.owner.count() == 0)
-                this.initDB()
-            else
-                console.log('Database already initialized');
-
+            await this.getOwners()
             let accounts = []
             if (type == 'Savings' || type == 'Current') {
                 console.log('I am inside getAccounts trying to query the database', type);
@@ -162,8 +132,9 @@ export default class AccountsRepo {
 
 
     async getOwners() {
+
         try {
-            return await prisma.owner.findMany()
+
         } catch (error) {
             console.log(error);
             return { error: error.message }
@@ -172,17 +143,7 @@ export default class AccountsRepo {
 
     async getOwnerReport(ownerId) {
         try {
-            const ownerReport = await prisma.owner.findUnique({
-                where: { id: ownerId },
-                include: {
-                    accounts: {
-                        include: { transactions: true }
-                    }
-                }
-            })
-            console.log(JSON.stringify(ownerReport, null, 2));
 
-            return ownerReport
         } catch (error) {
             console.log(error);
             return { error: error.message }
@@ -190,20 +151,6 @@ export default class AccountsRepo {
     }
     async getTransSum(accountNo, fromDate, toDate) {
         try {
-            const transSum = await prisma.transaction.groupBy({
-                where: {
-                    accountNo: 'asw2rtyuio0',
-                    date: {
-                        gte: new Date('2021-05-16T10:00:00.000Z').toISOString(),
-                        lte: new Date('2021-11-16T10:00:00.000Z').toISOString()
-                    }
-
-                },
-                by: ['transType'],
-                _sum: { amount: true }
-            })
-            console.log(transSum);
-            return transSum
 
         } catch (error) {
             console.log(error);
@@ -212,13 +159,6 @@ export default class AccountsRepo {
     }
     async getAvgBalance() {
         try {
-            const avgBalance = await prisma.account.groupBy({
-                by: ['acctType'],
-                _avg: { balance: true }
-            })
-
-
-            return avgBalance
 
         } catch (error) {
             console.log(error);
@@ -228,12 +168,7 @@ export default class AccountsRepo {
 
     async getMinMaxBalance() {
         try {
-            const minMaxBalance = await prisma.account.aggregate({
-                _max: { balance: true },
-                _min: { balance: true },
-            })
-            console.log(minMaxBalance);
-            return minMaxBalance
+
         } catch (error) {
             console.log(error);
             return { error: error.message }
@@ -242,12 +177,7 @@ export default class AccountsRepo {
 
     async getTop3Accounts() {
         try {
-            const topThreeAccounts = await prisma.account.findMany({
-                orderBy: { balance: 'asc' },
-                take: 3
-            })
-            console.log(topThreeAccounts);
-            return topThreeAccounts
+
         } catch (error) {
             console.log(error);
             return { error: error.message }
