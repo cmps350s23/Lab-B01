@@ -16,8 +16,10 @@ export default class AccountsRepo {
         try {
             // await this.getOwners()
             // await this.getAvgBalance()
+            // this.deleteOwner("dfghfrjki756gh")
+            // const owners = await this.searchOwner('J D')
+            this.getTrans('rsfrg2fprksfrg2fpt', '2021-05-16T10:00:00.000Z', '2021-11-17T10:00:00.000Z')
 
-            this.deleteOwner("dfghfrjki756gh")
 
             let accounts = []
             if (type == 'Savings' || type == 'Current') {
@@ -156,6 +158,61 @@ export default class AccountsRepo {
         }
 
     }
+    async searchOwner(fullName) {
+
+        const [firstName, lastName] = fullName.split(' ')
+
+        console.log('FirstName ', firstName, 'LastName', lastName);
+
+        try {
+            const owners = await prisma.owner.findMany({
+                where: {
+                    firstName: {
+                        contains: firstName
+                    },
+                    lastName: {
+                        contains: lastName
+                    }
+                }
+            }
+            )
+            console.log(owners);
+            return owners
+
+        } catch (error) {
+            console.log(error);
+            return { error: error.message }
+        }
+
+    }
+    async getTrans(accountNo, fromDate, toDate) {
+
+        try {
+            const transactions = await prisma.transaction.findMany({
+                where: {
+                    accountNo,
+                    date: {
+                        gte: new Date(fromDate).toISOString(),
+                        lte: new Date(toDate).toISOString(),
+                    },
+                    amount: {
+                        gte: 500,
+                        lte: 1000,
+                    }
+
+                }
+            })
+            console.log('Account with account No ', accountNo, 'transactions are ', transactions);
+            return transactions
+
+        } catch (error) {
+            console.log(error);
+            return { error: error.message }
+        }
+
+    }
+
+
 
     async getOwnerReport(ownerId) {
         try {
