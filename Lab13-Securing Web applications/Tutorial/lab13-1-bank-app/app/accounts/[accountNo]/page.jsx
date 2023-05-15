@@ -7,6 +7,7 @@ export default async function Edit({ params }) {
 
     const owners = await getOwners()
 
+
     // this is a hack to decide if we are editing or adding a new account
     // during edit, we need to get the data of the account details
     // during add, we need to create a new account

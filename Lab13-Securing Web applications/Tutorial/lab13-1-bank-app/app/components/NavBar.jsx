@@ -9,7 +9,6 @@ export default function NavBar() {
     // add singout button 
     //also hide the nav bar if the user is not logged in
 
-
     return (
         <>
             <nav className={styles.nav}>
