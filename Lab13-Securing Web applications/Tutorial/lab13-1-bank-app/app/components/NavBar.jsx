@@ -15,16 +15,19 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className={styles.nav}>
-                {!session ? <SignIn /> : <SignOut />}
-                <ul>
-                    <li>Alpha Bank</li>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/accounts/trans">Add Transaction</Link></li>
-                    <li><Link href="/accounts/report">Summary Reports</Link></li>
-                </ul>
-            </nav>
-        </>
-
-    )
+            {
+                !session ? '' : <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="javascript:void(0)">Alpha Bank</a>
+                        <ul class="navbar-nav me-auto">
+                            <li>Alpha Bank</li>
+                            <li className='nav-item'><Link href="/" className='nav-link'>Home</Link></li>
+                            <li className='nav-item'><Link href="/accounts/trans" className='nav-link'>Add Transaction</Link></li>
+                            <li className='nav-item'><Link href="/accounts/report" className='nav-link'>Summary Reports</Link></li>
+                        </ul>
+                        < SignOut />
+                    </div>
+                </nav>
+            }
+        </>)
 }

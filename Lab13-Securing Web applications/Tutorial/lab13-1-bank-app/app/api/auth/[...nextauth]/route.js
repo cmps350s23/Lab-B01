@@ -1,5 +1,6 @@
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GitHubProvider from "next-auth/providers/github";
 
 export const authOptions = {
     providers: [
@@ -34,8 +35,15 @@ export const authOptions = {
                     // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
                 }
             }
+        }),
+        GitHubProvider({
+            clientId: process.env.GITHUB_ID,
+            clientSecret: process.env.GITHUB_SECRET
         })
-    ]
+    ],
+    pages: {
+        signIn: "/login",
+    }
 }
 
 const handler = NextAuth(authOptions)

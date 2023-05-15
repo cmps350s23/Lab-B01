@@ -16,3 +16,7 @@ NEXTAUTH_SECRET=ASFLKJASDLKFJLASKJDFLKJASD
 # The secret used to sign the JWTs issued to clients.
 # [you can use any random string here]
 SECRET_KEY=jkhjkhkjhkjhkjhkjhkjhkjh
+
+
+
+
