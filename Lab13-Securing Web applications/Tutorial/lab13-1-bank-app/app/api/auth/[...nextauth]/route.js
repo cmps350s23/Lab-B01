@@ -16,9 +16,15 @@ export const authOptions = {
             },
             async authorize(credentials, req) {
                 // Add logic here to look up the user from the credentials supplied
-                const user = { id: "1", name: "J Smith", email: "jsmith@example.com" }
+                const response = await fetch("http://localhost:3000/api/users/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(credentials)
 
-                if (user) {
+                })
+                const user = await response.json()
+
+                if (user && !user.error) {
                     // Any object returned will be saved in `user` property of the JWT
                     return user
                 } else {
