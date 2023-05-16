@@ -12,17 +12,12 @@ export default function Login(params) {
         const password = event.currentTarget.password.value
         // Send email and password to your API route
 
-        try {
-            const error = await signIn('credentials', {
-                email,
-                password,
-                redirect: true,
-                callbackUrl: '/'
-            })
-        } catch (error) {
-            alert(error)
-        }
-
+        await signIn('credentials', {
+            email,
+            password,
+            redirect: true,
+            callbackUrl: '/'
+        })
         // call teh signIn function here and pass the email and password and redirect to home page
     }
     return (
