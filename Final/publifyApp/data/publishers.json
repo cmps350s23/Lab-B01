@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Electronic Arts",
+        "location": "California, US",
+        "established": 1982,
+        "logo": "https://yt3.googleusercontent.com/amN4KdPdYAkdcIe1HOQme7ENyO6ksWW9dUdDhL8hUWotX3l4Qle6KmapXIdSwbYOf5u62tWt=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+        "id": 2,
+        "name": "Ubisoft",
+        "location": "Paris, France",
+        "established": 1986,
+        "logo": "https://www.reuters.com/resizer/gnCF8B8k4UF5OBRa1fWPgYnXKEc=/960x1200/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/YSIZCJEAI5PDDLYHNZZCI5F2FI.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Activision Blizzard",
+        "location": "California, US",
+        "established": 2008,
+        "logo": "https://assetsio.reedpopcdn.com/activision-ensmble.jpg?width=1200&height=1200&fit=crop&quality=100&format=png&enable=upscale&auto=webp"
+    },
+    {
+        "id": 4,
+        "name": "Nintendo",
+        "location": "Kyoto, Japan",
+        "established": 1889,
+        "logo": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1b44f5b-76cf-4b4f-b250-5bacc9dae01e/devmukl-354f3174-2b75-426f-a4c6-5c82f070010c.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QxYjQ0ZjViLTc2Y2YtNGI0Zi1iMjUwLTViYWNjOWRhZTAxZVwvZGV2bXVrbC0zNTRmMzE3NC0yYjc1LTQyNmYtYTRjNi01YzgyZjA3MDAxMGMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.SUW71GO0mqrMzA5fMHETXOVD6uVqli8GGmndH6_VRl4"
+    }
+]

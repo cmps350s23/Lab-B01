@@ -1,0 +1,56 @@
+<!-- // Publisher Card Design -->
+<div className={styles.container}>
+    <div className={styles.cardList} id="recipe-cards">
+        {/* Render the cards here by looping through the list of publishers */}
+    </div>
+</div>
+
+
+{/* This is one Publisher Card's Design that should be rendered */ }
+<div className={styles.card} key={publisher.id}>
+    <div className={styles.cardImage}>
+        <img src='' alt="London trip" width={200} height={200} />
+    </div>
+    <div className={styles.cardBody}>
+        <h2>NAME</h2>
+        <h4>LOCATION</h4>
+        <h4>Establishement</h4>
+    </div>
+    <div className={styles.actionBtns}>
+        <Link className={styles.showGamesBtn} href={`/publishers/${publisher.id}`}>
+        <i className="fas fa-book"> Show Games </i></Link>
+
+        <button className={styles.btnDelete}>
+            <i className="fas fa-trash"> Delete Publisher </i></button>
+    </div>
+</div>
+<!-- {/* Card design ends here */ } -->
+
+
+<!-- display list of games as cards -->
+<!-- Here is teh design for the GamesList -->
+
+<div>
+    <Link href={ } className={styles.backBtn}><i className="fas fa-arrow-left"> </i> Back to Home</Link>
+    <br></br>
+    <div className={styles.cardList} id="recipe-cards">
+        {/* Render the cards here by looping through the list of games */}
+
+    </div>
+</div>
+
+<!-- Here is the design for the GameCard -->
+
+<div className={styles.card} key={game.id}>
+    <div className={styles.cardImage}>
+        <img src={game.image} alt="London trip" width={200} height={200} />
+    </div>
+    <div className={styles.cardBody}>
+        <h2>{game.name}</h2>
+        <h4>{game.availability ? 'Available' : 'Not Available'}</h4>
+        <h4>{game.price}</h4>
+        <hr>
+        </hr>
+        <p className={styles.description}>{game.description}</p>
+    </div>
+</div>

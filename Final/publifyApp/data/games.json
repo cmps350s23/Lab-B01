@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "image": "https://media.wired.com/photos/639bf35a24c352e627eccc43/16:9/w_2400,h_1350,c_limit/Ragnarök-culture-ar1qdh.jpg",
+        "name": "God of War",
+        "description": "God of War is a 2018 action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment. It is the eighth installment in the God of War series and serves as a soft reboot. The game features protagonist Kratos, who must journey with his son Atreus to fulfill his wife's dying wish and scatter her ashes at the highest peak of the nine realms. The game features an over-the-shoulder free camera, a variety of combat options, and puzzles that require the use of both characters' abilities.",
+        "price": 49.99,
+        "availability": true,
+        "publisherId": 1
+    },
+    {
+        "id": 2,
+        "image": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/wiiu_14/SI_WiiU_TheLegendOfZeldaBreathOfTheWild.jpg",
+        "name": "The Legend of Zelda: Breath of the Wild",
+        "description": "The Legend of Zelda: Breath of the Wild is a 2017 action-adventure game developed and published by Nintendo for the Nintendo Switch and Wii U consoles. It is the nineteenth main installment in The Legend of Zelda series. The game follows protagonist Link, who awakens from a hundred-year slumber to a mysterious voice that guides him to defeat Calamity Ganon before he can destroy the kingdom of Hyrule.",
+        "price": 59.99,
+        "availability": true,
+        "publisherId": 1
+    },
+    {
+        "id": 3,
+        "image": "https://sportshub.cbsistatic.com/i/2021/04/25/cbca621c-fc11-48c8-9bf5-514c86f1c0a5/cyberpunk-2077-1261707.jpg",
+        "name": "Cyberpunk 2077",
+        "description": "Cyberpunk 2077 is a 2020 action role-playing game developed and published by CD Projekt Red. The game is set fifty-seven years after the events of the original tabletop game, in a dystopian Night City, California, an open world with six distinct regions. Players assume the first-person perspective of a customisable mercenary known as V, who can acquire skills in hacking and machinery, an arsenal of ranged weapons, and options for melee combat.",
+        "price": 49.99,
+        "availability": false,
+        "publisherId": 2
+    },
+    {
+        "id": 4,
+        "image": "https://www.syfy.com/sites/syfy/files/2020/04/final-fantasy-vii-remake-cloud-shinra.jpg",
+        "name": "Final Fantasy VII Remake",
+        "description": "Final Fantasy VII Remake is a 2020 action role-playing game developed and published by Square Enix. It is a remake of the 1997 PlayStation game Final Fantasy VII, retelling the story of mercenary Cloud Strife as he and eco-terrorist group AVALANCHE battle against the Shinra Electric Power Company, who plan to drain the planet's life essence as an energy source. The game features real-time action combat and a reimagined storyline.",
+        "price": 59.99,
+        "availability": false,
+        "publisherId": 2
+    },
+    {
+        "id": 5,
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/capsule_616x353.jpg?t=1671485009",
+        "name": "Red Dead Redemption 2",
+        "description": "Red Dead Redemption 2 is a 2018 action-adventure game developed and published by Rockstar Games. It is the third entry in the Red Dead series and a prequel to the 2010 game Red Dead Redemption. The game is set in a fictionalized version of the Western, Midwestern, and Southern United States in 1899, and follows outlaw Arthur Morgan, a member of the Van der Linde gang.",
+        "price": 39.99,
+        "availability": false,
+        "publisherId": 2
+    },
+    {
+        "id": 6,
+        "image": "https://variety.com/wp-content/uploads/2021/03/ghost-of-tsushima-background-block-01-ps4-en-21jul20.jpeg",
+        "name": "Ghost of Tsushima",
+        "description": "Ghost of Tsushima is a 2020 action-adventure game developed by Sucker Punch Productions and published by Sony Interactive Entertainment. The game is set on Tsushima Island during the Mongol invasion of Japan in 1274, and follows samurai Jin Sakai as he fights to save his homeland. The game features an open world environment and incorporates elements of stealth and exploration.",
+        "price": 49.99,
+        "availability": true,
+        "publisherId": 3
+    },
+    {
+        "id": 7,
+        "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2208920/capsule_616x353.jpg?t=1671135934",
+        "name": "Assassin's Creed Valhalla",
+        "description": "Assassin's Creed Valhalla is a 2020 action role-playing game developed by Ubisoft Montreal and published by Ubisoft. Set in 873 AD, the game tells the story of Eivor, a Viking raider who becomes embroiled in the conflict between the Brotherhood of Assassins and the Order of the Ancients. The game features a large open world, melee combat, and RPG elements.",
+        "price": 59.99,
+        "availability": true,
+        "publisherId": 3
+    },
+    {
+        "id": 8,
+        "image": "https://cdn1.epicgames.com/3328b08ac1c14540aa265a1a85c07839/offer/hzd_wide-2560x1440-bd312be05c49cf339097777c493cb899.jpg",
+        "name": "Horizon Zero Dawn",
+        "description": "Horizon Zero Dawn is a 2017 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. It is set in a post-apocalyptic world overrun by robots, where players control Aloy, a hunter and archer who sets out on a quest to uncover her past. The game features an open world environment and incorporates elements of third-person shooter and RPG gameplay mechanics.",
+        "price": 39.99,
+        "availability": true,
+        "publisherId": 4
+    },
+    {
+        "id": 9,
+        "image": "https://cdn1.epicgames.com/f4a904fcef2447439c35c4e6457f3027/offer/DS_wide-2560x1440-c3d7bbf8ee36dd025610088381a5235a.jpg",
+        "name": "Death Stranding",
+        "description": "Death Stranding is a 2019 action game developed by Kojima Productions and published by Sony Interactive Entertainment. The game is set in a post-apocalyptic United States, where players control courier Sam Porter Bridges as he delivers supplies to isolated colonies and tries to reunite a fractured society. The game features open world exploration and a unique multiplayer system that allows players to help each other traverse the environment.",
+        "price": 39.99,
+        "availability": true,
+        "publisherId": 4
+    },
+    {
+        "id": 10,
+        "image": "https://image.api.playstation.com/vulcan/img/rnd/202010/2618/itbSm3suGHSSHIpmu9CCPBRy.jpg",
+        "name": "The Last of Us Part II",
+        "description": "The Last of Us Part II is a 2020 action-adventure game developed by Naughty Dog and published by Sony Interactive Entertainment. It is the sequel to 2013's The Last of Us and follows Ellie, who must navigate a post-apocalyptic United States in an effort to find peace and closure.",
+        "price": 59.99,
+        "availability": true,
+        "publisherId": 4
+    }
+]
